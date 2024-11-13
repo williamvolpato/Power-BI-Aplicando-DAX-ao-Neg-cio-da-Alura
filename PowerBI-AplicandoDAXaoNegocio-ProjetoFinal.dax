@@ -1,0 +1,8 @@
+﻿EVALUATE
+//VALUES(Tb_Produtos);
+//ROW("Total lucro", [Total Lucro])
+ROW (
+    "teste",
+        CALCULATE ( [Total Vendas] * 1.3, Tb_ItensNotas[Quantidade] > 20 )
+            + CALCULATE ( [Total Vendas] * 0.5, NOT Tb_ItensNotas[Quantidade] > 20 )
+)
